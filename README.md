@@ -21,9 +21,9 @@ pool, and thus increases the diversity of the detected regression faults. We con
 
 
 ## Datasets/Models
-We used 4 popular DL models based on 4 datasets on five regression scenarios.
+We used 4 popular DL models based on 4 datasets on five regression scenarios, as the initial seed models in `DRFuzz`, which have been widely used in many existing studies.
 
-| dataset       | model    | regression scenario                      |
+| Dataset       | Model    | Regression Scenario                      |
 | ------------- | -------- | ---------------------------------------- |
 | MNIST         | LeNet5   | SUPPLY,ADV:BIM,ADV:CW,FIXING,PRUNE,QUANT |
 | CIFAR10       | VGG16    | SUPPLY,ADV:BIM,ADV:CW,FIXING,PRUNE       |
