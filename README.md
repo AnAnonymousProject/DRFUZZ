@@ -1,5 +1,10 @@
 # DRFUZZ
 
+## Description
+
+`DRFuzz` is a novel regression fuzzing technique for DL systems by generating fault-triggering inputs with high fidelity and diversity. `DRFuzz` adopts the MCMC strategy to select mutation rules that are prone to generating fault-triggering test inputs and proposes a GAN-based fidelity assurance method to ensure the fidelity of the generated inputs. Also, `DRFuzz` incorporates tree-based seed pool trimming and seed probability decay to maintain the quality of seed
+pool, and thus increases the diversity of the detected regression faults. We conducted an empirical study to evaluate the effectiveness of `DRFuzz` on four subjects in five regression scenarios, and the results show that `DRFuzz` outperforms state-of-the-art techniques in detecting unique regression faults across all the subjects and scenarios. Moreover, `DRFuzz` can help improve the defense capability of the models against existing black-box attacking techniques
+
 ## The Structure
 
 - coverages: baseline coverages and the input evaluation to calculate the diversity in DRFUZZ
