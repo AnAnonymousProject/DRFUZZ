@@ -7,7 +7,7 @@ pool, and thus increases the diversity of the detected regression faults. We con
 
 ## The Structure
 
-- coverages: baseline coverages and the input evaluation to calculate the diversity in DRFUZZ
+- coverages: baseline coverages and the input evaluation to calculate the diversity in `DRFuzz`
 
 - dcgan: the GAN-based Fidelity Assurance Technique
 
@@ -15,7 +15,7 @@ pool, and thus increases the diversity of the detected regression faults. We con
 
 - models: the original models and its regression model.
 
-- params: some params of DRFUZZ and each model/datasets
+- params: some params of `DRFuzz` and each model/datasets
 
 - src: the main algorithm of DRFUZZ & The experimental script
 
@@ -60,7 +60,7 @@ dataset refers to the dataset you acquired, there are totally 4 choices ["MNIST"
 models refers to the model you acquired, we totally designed 22 models according to 'Datasets/Models'. The setting are presented in the main.py.
 please select according to Datasets/Models and your experimental settings.
 
-coverage refers to the coverage used for experiment, please set it to 'change' if you want to use DRFUZZ, other choices are for compared approaches such as DeepHunter.
+coverage refers to the coverage used for experiment, please set it to 'change' if you want to use `DRFuzz`, other choices are for compared approaches such as DeepHunter.
 
 time refers to the time of experiment. we set it to 1440 minutes (24 hours) for our experiment.
 
