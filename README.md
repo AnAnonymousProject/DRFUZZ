@@ -12,6 +12,7 @@ Here, we briefly introduce the usage/function of each directory:
 - `coverages`: baseline coverages and the input evaluation to calculate the diversity in `DRFuzz`
 - `dcgan`: the GAN-based Fidelity Assurance Technique (the DCGAN structure and prediction code)
 - `kmnc_profile`: profile for compared approach DeepHunter-KMNC, which saves the boundary value of each neuron.（Please note that, This is only for DeepHunter-KMNC following the implementation of its source code to improve the efficiency of KMNC）
+- `dataset`: the stored dataset
 - `models`: the original models and its regression model. (Since  the file size of some models are large, here we provide all the models and regression model on MNIST-LeNet5 for the reproduction)
 - `params`: some params of `DRFuzz` and each model/datasets
 - `src`: the main algorithm of DRFUZZ & The experimental script
