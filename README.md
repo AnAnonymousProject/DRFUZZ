@@ -21,12 +21,31 @@ Here, we briefly introduce the usage/function of each directory:
 
 We use 4 popular DL models based on 4 datasets under five regression scenarios, as the initial seed models in `DRFuzz`, which have been widely used in many existing studies.
 
-| Dataset       | Model    | ID & Regression Scenario                                     |
-| ------------- | -------- | ------------------------------------------------------------ |
-| MNIST         | LeNet5   | 1:SUPPLY; 2: ADV:BIM; 3:ADV:CW; 4:FIXING; 5:PRUNE; 6:QUANT   |
-| CIFAR10       | VGG16    | 7:SUPPLY; 8: ADV:BIM; 9:ADV:CW; 10:FIXING; 11:PRUNE;         |
-| Fashion-MNIST | AlexNet  | 12:SUPPLY; 13: ADV:BIM; 14:ADV:CW; 15:FIXING; 16:PRUNE; 17:QUANT |
-| SVHN          | ResNet18 | 18:SUPPLY; 19: ADV:BIM; 20:ADV:CW; 21:FIXING; 22:PRUNE;      |
+| ID   | model    | dataset | M1_acc | M2_acc | Scenario |
+| ---- | -------- | ------- | ------ | ------ | -------- |
+| 1    | LeNet5   | MNIST   | 85.87% | 97.83% | SUPPLY   |
+| 2    | LeNet5   | MNIST   | 98.07% | 97.5%  | ADV:BIM  |
+| 3    | LeNet5   | MNIST   | 98.07% | 98.3%  | ADV:CW   |
+| 4    | LeNet5   | MNIST   | 98.07% | 98.12% | FIXING   |
+| 5    | LeNet5   | MNIST   | 98.07% | 98.12% | PRUNE    |
+| 6    | LeNet5   | MNIST   | 98.07% | 98.06% | QUANT    |
+| 7    | VGG16    | CIFAR10 | 87.67% | 87.88% | SUPPLY   |
+| 8    | VGG16    | CIFAR10 | 87.92% | 87.51% | ADV:BIM  |
+| 9    | VGG16    | CIFAR10 | 87.92% | 88%    | ADV:CW   |
+| 10   | VGG16    | CIFAR10 | 87.92% | 88.4%  | FIXING   |
+| 11   | VGG16    | CIFAR10 | 87.92% | 76.27% | PRUNE    |
+| 12   | AlexNet  | FM      | 89.33% | 90.34% | SUPPLY   |
+| 13   | AlexNet  | FM      | 91.7%  | 90.96% | ADV:BIM  |
+| 14   | AlexNet  | FM      | 91.7%  | 91.87% | ADV:CW   |
+| 15   | AlexNet  | FM      | 91.7%  | 92.9%  | FIXING   |
+| 16   | AlexNet  | FM      | 91.7%  | 91.54% | PRUNE    |
+| 17   | AlexNet  | FM      | 91.7%  | 91.78% | QUANT    |
+| 18   | ResNet18 | SVHN    | 88.85% | 91.93% | SUPPLY   |
+| 19   | ResNet18 | SVHN    | 92.05% | 91.9%  | ADV:BIM  |
+| 20   | ResNet18 | SVHN    | 92.05% | 92.01% | ADV:CW   |
+| 21   | ResNet18 | SVHN    | 92.05% | 92.1%  | FIXING   |
+| 22   | ResNet18 | SVHN    | 92.05% | 91%    | PRUNE    |
+
 
 1: We design 5 regression scenarios: supplementary training (denoted as SUPPLY), adversarial  training (denoted as ADV), white-box model fixing (denoted as FIXING), Model Pruning(denoted as PRUNE), Model quantization (denoted as QUANT). 
 
