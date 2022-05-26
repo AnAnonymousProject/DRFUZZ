@@ -105,3 +105,43 @@ main.py contains all the configurations for experiment.
 `--coverage` refers to the coverage used for experiment, please set it to 'change' if you want to use `DRFuzz`, other choices are for compared approaches such as DeepHunter.
 
 `--time` refers to the time of experiment. we set it to 1440 minutes (24 hours) for our experiment.
+
+### RQ2 and its accuracy against test set
+|                       | train on   | on DiffChaser | on DeepHunter | on DRFuzz | testset |
+| --------------------- | ---------- | ------------- | ------------- | --------- | ------- |
+| mnist_lenet5_sup      | diffchaser | -             | 41.13%        | 64.06%    | 99.14%  |
+|                       | deephunter | 85.62%        | -             | 73.88%    | 99.09%  |
+|                       | DRFuzz     | 96.70%        | 63.80%        | -         | 99.26%  |
+| mnist_lenet5_adv_cw   | diffchaser | -             | 34.01%        | 54.78%    | 98.15%  |
+|                       | deephunter | 83.99%        | -             | 66.74%    | 98.15%  |
+|                       | DRFuzz     | 76.08%        | 61.83%        | -         | 98.49%  |
+| mnist_lenet5_adv_bim  | diffchaser | -             | 27.01%        | 49.10%    | 98.34%  |
+|                       | deephunter | 74.20%        | -             | 57.66%    | 98.43%  |
+|                       | DRFuzz     | 78.72%        | 42.46%        | -         | 98.59%  |
+| cifar10_vgg16_tr      | diffchaser | -             | 62.77%        | 63.46%    | 88.19%  |
+|                       | deephunter | 64.92%        | -             | 69.10%    | 86.64%  |
+|                       | DRFuzz     | 91.40%        | 81.28%        | -         | 88.41%  |
+| cifar10_vgg16_adv_cw  | diffchaser | -             | 46.15%        | 53.96%    | 86.15%  |
+|                       | deephunter | 51.08%        | -             | 55.26%    | 86.32%  |
+|                       | DRFuzz     | 72.23%        | 75.30%        | -         | 87.34%  |
+| cifar10_vgg16_adv_bim | diffchaser | -             | 55.59%        | 56.88%    | 85.49%  |
+|                       | deephunter | 70.26%        | -             | 70.20%    | 88.21%  |
+|                       | DRFuzz     | 91.92%        | 79.41%        | -         | 89.03%  |
+| fm_alexnet_tr         | diffchaser | -             | 48.20%        | 46.56%    | 91.04%  |
+|                       | deephunter | 63.02%        | -             | 69.54%    | 91.02%  |
+|                       | DRFuzz     | 91.50%        | 70.80%        | -         | 91.65%  |
+| fm_alexnet_adv_cw     | diffchaser | -             | 52.57%        | 46.04%    | 90.29%  |
+|                       | deephunter | 55.04%        | -             | 59.42%    | 91.32%  |
+|                       | DRFuzz     | 77.84%        | 65.84%        | -         | 92.01%  |
+| fm_alexnet_adv_bim    | diffchaser | -             | 52.14%        | 49.58%    | 91.61%  |
+|                       | deephunter | 62.38%        | -             | 66.66%    | 91.83%  |
+|                       | DRFuzz     | 89.92%        | 73.78%        | -         | 91.95%  |
+| svhn_resnet18_tr      | diffchaser | -             | 65.16%        | 59.34%    | 90.03%  |
+|                       | deephunter | 82.54%        | -             | 67.44%    | 92.64%  |
+|                       | DRFuzz     | 88.11%        | 81.46%        | -         | 91.40%  |
+| svhn_resnet18_adv_cw  | diffchaser | -             | 66.67%        | 62.12%    | 90.37%  |
+|                       | deephunter | 50.00%        | -             | 56.64%    | 89.72%  |
+|                       | DRFuzz     | 92.16%        | 81.06%        | -         | 93.22%  |
+| svhn_resnet18_adv_bim | diffchaser | -             | 73.53%        | 63.58%    | 91.77%  |
+|                       | deephunter | 78.03%        | -             | 70.92%    | 92.22%  |
+|                       | DRFuzz     | 98.44%        | 87.40%        | -         | 94.85%  |
